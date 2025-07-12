@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Virtual Campus Tour</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('./upscalemedia-transformed\ \(1\).jpeg') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      animation: fadeSlideUp 1.5s ease forwards;
+      opacity: 0;
+    }
+
+    .logo, h1, .slogan, .description, .tour-button {
+      opacity: 0;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .logo {
+      width: 100px;
+      animation-delay: 0.2s;
+    }
+
+    h1 {
+      color: #003366;
+      animation-delay: 0.4s;
+    }
+
+    .slogan {
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 10px;
+      animation-delay: 0.6s;
+    }
+
+    .description {
+      font-size: 16px;
+      color: #333;
+      margin-top: 10px;
+      animation-delay: 0.8s;
+    }
+
+    .tour-button {
+      margin-top: 20px;
+      background-color: #004080;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      animation-delay: 1s;
+    }
+
+    .tour-button:hover {
+      background-color: #0059b3;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeSlideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="logo.png" alt="School Logo" class="logo" />
+    <h1>Welcome to Don Jesus Gonzales SHS</h1>
+    <p class="slogan">"Fostering Knowledge, Inspiring Learners"</p>
+    <button class="tour-button" onclick="window.open('https://your-virtual-tour-link.com', '_blank')">Open Virtual Tour</button>
+  </div>
+
+</body>
+</html>
